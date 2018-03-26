@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,40 +21,40 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Airbnb Analysis - Daniel Liu</a>
+    <a class="navbar-brand" href="index.html">SF Dispatch Response Analysis - Daniel Liu</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="#datavisuals">
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">AIRBNB HOST</span>
+            <span class="nav-link-text">Data Visuals</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="charts.html">
+          <a class="nav-link" href="#dispatchpredictor">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Maps</span>
+            <span class="nav-link-text">Dispatch Predictor</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="tables.html">
+          <a class="nav-link" href="#longestdispatch">
             <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Tables</span>
+            <span class="nav-link-text">Longest Dispatch Time</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link nav-link-collapse collapsed" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">Average Income</span>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="#crimecorrelation">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Crime Correlation</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
-          <a class="nav-link nav-link-collapse collapsed" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-file"></i>
-            <span class="nav-link-text">Price Optimization</span>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Graphs">
+          <a class="nav-link" href="#heatmaps">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Heat Maps</span>
           </a>
         </li>
       </ul>
@@ -63,72 +64,78 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
-      <ol class="breadcrumb">
+   <!--    <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="#">Airbnb</a>
         </li>
         <li class="breadcrumb-item active">Random Data</li>
-      </ol>
+      </ol> -->
       <!-- Icon Cards-->
-      <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-comments"></i>
-              </div>
-              <div class="mr-5">RANDOM STUFF</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-warning o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-list"></i>
-              </div>
-              <div class="mr-5">MORE RANDOM STUFF</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Area Chart Example-->
-      <div class="card mb-3">
-        <div class="card-header">
-          <i class="fa fa-area-chart"></i> San Francisco Listings Heatmap</div>
-        <iframe src="./SFheatmap.html" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-      </div>
-      <div class="row">
-        <div class="col-lg-8">
-          <!-- Example Bar Chart Card-->
-          <div class="card mb-3">
-            <div class="card-header">
-              <i class="fa fa-bar-chart"></i> Another Heatmap</div>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-sm-8 my-auto">
-                  <canvas id="myBarChart" width="100" height="50"></canvas>
+      <div id = "datavisuals">
+        <div class="row">
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-primary o-hidden h-100">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="fa fa-fw fa-comments"></i>
                 </div>
+                <div class="mr-5">RANDOM STUFF</div>
               </div>
+              <a class="card-footer text-white clearfix small z-1" href="#">
+                <span class="float-left">Details</span>
+                <span class="float-right">
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </a>
             </div>
           </div>
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-warning o-hidden h-100">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="fa fa-fw fa-list"></i>
+                </div>
+                <div class="mr-5">MORE RANDOM STUFF</div>
+              </div>
+              <a class="card-footer text-white clearfix small z-1" href="#">
+                <span class="float-left">Details</span>
+                <span class="float-right">
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- Example DataTables Card-->
+
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Airbnb Data Table</div>
+          <div id = "dispatchpredictor">Dispatch Predictor
+            <p>Given an address and time, what is the most likely dispatch to be required?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header">
+          <div id = "longestdispatch"> Longest Dispatch Time, On Average
+            <p>Which areas take the longest time to dispatch to on average? How can this be reduced?</p>
+            <h3>Visitacion Valley, Portola (Zipcode: 94134)</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header">
+          <div id = "crimecorrelation"> Crime Correlation
+            <p>Based on the type of dispatch and the frequency of dispatch, show the most calm and safe neighborhoods in the city</p>
+            <h3>Safest neighborhood in the city: PRESIDIO</h3></div>
+          </div>
+        </div>
+      </div>
+     <!--  <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Dispatch Data Table</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -144,7 +151,33 @@
             </table>
           </div>
         </div>
+      </div> -->
+      <!-- Area Chart Example-->
+      <div id = "heatmaps">
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-area-chart"></i> San Francisco Dispatch Heatmap</div>
+          <iframe src="./SFheatmap.html" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8">
+            <!-- Example Bar Chart Card-->
+            <div class="card mb-3">
+              <div class="card-header">
+                <i class="fa fa-bar-chart"></i> Another Heatmap</div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-8 my-auto">
+                      <canvas id="myBarChart" width="100" height="50"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
       </div>
+      
     </div>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
